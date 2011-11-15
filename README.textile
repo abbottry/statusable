@@ -1,0 +1,59 @@
+# Statusable
+Allows for using a status column, rather than inheriting Enumberable or using a mapping table
+
+## Basic Use
+```ruby
+class Invite < ActiveRecord::Base
+	include Statusable
+
+	# define the statuses of this model
+	has_statuses :column_name => "status_value",
+		:pending		=> 0,
+		:queued			=> 1, 
+		:declined		=> 2,
+		:spam				=> 3,
+		:delivered	=> 4,
+		:accepted		=> 5
+
+end
+```
+
+# Features
+* named_scopes for each status
+* boolean instance methods to check for statuses
+* assignment of status based on symbol or integer value
+	
+# Examples
+
+```ruby	
+# named_scopes
+Invite.pending
+=>  returns all pending invites (invites with status 0)
+
+i = Invite.new
+
+# assignment by symbol, or integer
+i.status = :queued
+i.status = 5
+
+# boolean status methods
+i.pending?
+=> false
+
+i.accepted
+=> true
+
+# get all the statuses
+Invite.statuses
+=> {:pending=>0, :queued=>1, :declined=>2, :spam=>3, :delivered=>4, :accepted=>5}
+
+# get the value of a status
+Invite.statuses[:accepted]
+=> 5
+```
+
+# Support
+I have no plans to 'continue' development on this, it does what I need it to do at this time. If you would like to extend it, turn it into a plugin, go to town..
+
+# Credit
+This code (most of it remains, I've just added to it) is based of a pastebin I found by Marcello Barnaba <vjt@openssl.it> located here: http://pastebin.com/603FS8Xu
