@@ -9,8 +9,7 @@ class Invite < ActiveRecord::Base
     include Statusable
 
     # define the statuses of this model
-    has_statuses :column_name => "status_value",
-        :pending		=> 0,
+    has_statuses :pending		=> 0,
         :queued			=> 1, 
         :declined		=> 2,
         :spam			=> 3,
