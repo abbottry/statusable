@@ -10,17 +10,18 @@ class Invite < ActiveRecord::Base
 
     # define the statuses of this model
     has_statuses :column_name => "status_value",
-        :pending        => 0,
-        :queued            => 1, 
-        :declined        => 2,
-        :spam                => 3,
-        :delivered    => 4,
-        :accepted        => 5
+        :pending		=> 0,
+        :queued			=> 1, 
+        :declined		=> 2,
+        :spam				=> 3,
+        :delivered	=> 4,
+        :accepted		=> 5
 
 end
 </pre></code>
 
 h2. Features
+
 * named_scopes for each status
 * boolean instance methods to check for statuses
 * assignment of status based on symbol or integer value
@@ -60,4 +61,4 @@ I have no plans to 'continue' development on this, it does what I need it to do 
 
 h2. Credit
 
-This code (most of it remains, I've just added to it) is based of a pastebin I found by Marcello Barnaba <vjt@openssl.it> located here: http://pastebin.com/603FS8Xu
+This code (most of it remains, I've just added to it) is based of a pastebin I found by Marcello Barnaba <vjt@openssl.it> located here: @http://pastebin.com/603FS8Xu
