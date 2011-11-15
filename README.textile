@@ -13,7 +13,7 @@ class Invite < ActiveRecord::Base
         :pending		=> 0,
         :queued			=> 1, 
         :declined		=> 2,
-        :spam		=> 3,
+        :spam			=> 3,
         :delivered		=> 4,
         :accepted		=> 5
 
