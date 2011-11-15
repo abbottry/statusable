@@ -60,4 +60,4 @@ I have no plans to 'continue' development on this, it does what I need it to do 
 
 h2. Credit
 
-This code (most of it remains, I've just added to it) is based of a pastebin I found by "Marcello Barnaba":mailto:vjt@openssl.it" located "here":http://pastebin.com/603FS8Xu.
+This code (most of it remains, I've just added to it) is based of a pastebin I found by "Marcello Barnaba":mailto:vjt@openssl.it located "here":http://pastebin.com/603FS8Xu.
