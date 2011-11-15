@@ -1,8 +1,8 @@
-# Statusable
+h1. Statusable
 Allows for using a status column, rather than inheriting Enumberable or using a mapping table
 
 ## Basic Use
-```ruby
+<pre><code>
 class Invite < ActiveRecord::Base
 	include Statusable
 
@@ -16,16 +16,16 @@ class Invite < ActiveRecord::Base
 		:accepted		=> 5
 
 end
-```
+</pre></code>
 
-# Features
+h2. Features
 * named_scopes for each status
 * boolean instance methods to check for statuses
 * assignment of status based on symbol or integer value
 	
-# Examples
+h2. Examples
 
-```ruby	
+<pre><code>
 # named_scopes
 Invite.pending
 =>  returns all pending invites (invites with status 0)
@@ -50,10 +50,10 @@ Invite.statuses
 # get the value of a status
 Invite.statuses[:accepted]
 => 5
-```
+</pre></code>
 
-# Support
+h2. Support
 I have no plans to 'continue' development on this, it does what I need it to do at this time. If you would like to extend it, turn it into a plugin, go to town..
 
-# Credit
+h2. Credit
 This code (most of it remains, I've just added to it) is based of a pastebin I found by Marcello Barnaba <vjt@openssl.it> located here: http://pastebin.com/603FS8Xu
