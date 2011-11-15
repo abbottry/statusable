@@ -2,7 +2,8 @@ h1. Statusable
 
 Allows for using a status column, rather than inheriting Enumberable or using a mapping table
 
-## Basic Use
+h2. Basic Use
+
 <pre><code>
 class Invite < ActiveRecord::Base
     include Statusable
